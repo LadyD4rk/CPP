@@ -9,16 +9,16 @@ RESET = \033[0m
 #flags
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-EXEC = PhoneBook
+EXEC = Zombies
 OBJ_DIR = Obj
 
-SRC = main.cpp src/PhoneBook.cpp src/Contact.cpp
+SRC = main.cpp zombieHorde.cpp Zombie.cpp
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-		@echo "$(BG_BLUE)$(BLACK)[CREATE] Hello, hello, baby, you called? I can't hear a thing *-* $(RESET)"
+		@echo "$(BG_BLUE)$(BLACK)[CREATE] $(EXEC) *-* $(RESET)"
 		@$(CXX) $(CXXFLAGS) $(OBJ) -o $(EXEC)
 
 $(OBJ_DIR)/%.o: %.cpp

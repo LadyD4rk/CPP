@@ -1,0 +1,60 @@
+DIFERENÇA DE >> E <<:
+
+Quando usados com std::cout, std::cin ou arquivos, eles servem
+para enviar ou receber dados.
+
+    << (Insertion Operator - Inserção): Usado com std::cout para
+	enviar dados para a saída (imprimir na tela).
+        Exemplo: std::cout << "Olá Mundo";
+    >> (Extraction Operator - Extração): Usado com std::cin para
+	receber dados da entrada (ler do teclado).
+        Exemplo: std::cin >> variavel;
+
+Se eu quiser usar newline, pode escrever "std::endl" no lugar de
+"\n".
+
+DIFERENÇA DE HEAP E STACK
+
+	Stack - Memoria automática, criada e destruida sozinha quando a função termina,
+tamanho limitado, não precisa ser limpa.
+
+	Heap - Memoria manual, só é destruida quando a gente quer ou manda deletar, pode
+ter uma memoria maior e precisa ser limpa sempre que usada.
+
+CONSTRUTOR E DESTRUTOR
+
+São duas funções que na maioria das vezes tem de ser criadas em Classes.
+	Exemplo: Tenho a classe Batata, tenho de criar uma função chamada Batata()
+que é o mesmo nome da classe e embaixo uma função ~Batata().
+		Batata() = Construtor.
+		~Batata() = Destrutor.
+Essas duas funções sempre são chamadas no seu codigo mesmo de maneira
+indireta, o Construtor é o que inicia o seu objeto também podendo
+passar argumentos lá para dentro como "base" e o Destrutor é a 
+nossa garantia que o objeto foi limpo ou finalizado, se colocar para ele printar
+"saida" dentro da função e no final don programa tiver isso, significa que tudo
+foi finalizado.
+
+COMANDOS DE PRINTAR
+
+std::cerr << - Escreve no STDERR.
+std::cout << - Escreve no STDOUT.
+std::cin >> - Escreve no STDIN;
+
+CRIAR ALOCAÇÃO DE MEMORIA
+Quando queremos criar memória em um objeto usamos o comando new.
+
+	new - Cria um único objeto.
+Chama o construtor desse objeto e aloca memória dele.
+
+	new[] - Cria um array inteiro com a quantidade atribuida.
+Chama o construtor de cada elemento do array e aloca memoria dele todo.
+
+DIFERENÇA DE DELETES
+O comando Delete é o que usamos para dar free aos objetos criados.
+
+	Delete — Destrói um único objeto.
+Chama o destrutor desse objeto e liberta a memória desse objeto.
+
+	Delete[] — Destrói um array inteiro.
+Chama o destrutor de cada elemento do array e liberta toda a memória do array.

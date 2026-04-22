@@ -1,0 +1,30 @@
+Exercício 02: HI THIS IS BRAIN
+
+Exercício: 02
+HI THIS IS BRAIN
+Diretório: ex02/
+Ficheiros a Entregar: Makefile, main.cpp
+Proibido: None
+
+Escreve um programa que contenha:
+
+Uma variável string inicializada com "HI THIS IS BRAIN".
+stringPTR: um apontador para a string.
+stringREF: uma referência para a string.
+
+O teu programa deve imprimir:
+
+O endereço de memória da variável string.
+O endereço de memória guardado por stringPTR.
+O endereço de memória guardado por stringREF.
+
+E depois:
+
+O valor da variável string.
+O valor apontado por stringPTR.
+O valor apontado por stringREF.
+
+Isso é tudo — sem truques. O objetivo deste exercício é desmistificar
+as referências, que podem parecer completamente novas. Apesar de existirem
+algumas pequenas diferenças, isto é simplesmente outra sintaxe para algo
+que já fazes: manipulação de endereços.

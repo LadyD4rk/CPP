@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:37:46 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/16 04:08:23 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/04/20 12:20:02 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,11 @@ std::string	Contact::Get_Nick()
 std::string	Contact::Get_Phone()
 {
 	return (phonenum);
+}
+
+std::string	Contact::Get_Dark()
+{
+	return (darksecret);
 }
 
 bool	Contact::Get_Check()

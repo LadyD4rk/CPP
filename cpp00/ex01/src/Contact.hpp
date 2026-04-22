@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:36:49 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/16 02:03:04 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/04/20 12:19:55 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ class Contact
 		std::string	Get_Last();
 		std::string	Get_Nick();
 		std::string	Get_Phone();
+		std::string	Get_Dark();
 		bool		Get_Check();
 
 	private:

@@ -58,3 +58,8 @@ Chama o destrutor desse objeto e liberta a memória desse objeto.
 
 	Delete[] — Destrói um array inteiro.
 Chama o destrutor de cada elemento do array e liberta toda a memória do array.
+
+REFERÊNCIA E PONTEIRO
+Referência sempre tem de ser inicializada com uma variavel da qual vai ser sua
+cópia. A referência não pode ser mudada, ela recebe uma informação e muda o
+conteudo que foi passado como parametro.

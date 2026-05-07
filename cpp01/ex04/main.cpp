@@ -5,29 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 11:20:49 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/05 12:51:27 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/05/05 13:12:27 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/05/07 15:56:39 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.hpp"
 
-int main()
+int main(int ac, char **av)
 {
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
+	std::string		old_str;
+	std::string		new_str;
+	std::string		content;
+	std::string		replace;
+	
+	if (ac != 4)
+		return (1);
+	old_str = av[2];
+	new_str = av[3];
+	content = contentFile(av[1]);
+	replace = searchAndReplace(content, old_str, new_str);
+	newFile(av[1], replace);
+	return (0);
 }

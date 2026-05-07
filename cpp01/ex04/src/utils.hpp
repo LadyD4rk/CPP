@@ -1,33 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   utils.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 11:20:49 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/05 12:51:27 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/05/07 15:55:49 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/05/07 15:56:19 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.hpp"
+#ifndef UTILS_HPP
+# define UTILS_HPP
 
-int main()
-{
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
-	}
-	{
-		Weapon club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
-	return 0;
-}
+# include <string>
+# include <fstream>
+# include <iostream>
+
+std::string	contentFile(char *namefile);
+void		newFile(char *name, std::string content);
+std::string	searchAndReplace(std::string content, std::string s1, std::string s2);
+
+#endif

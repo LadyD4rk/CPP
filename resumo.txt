@@ -63,3 +63,36 @@ REFERÊNCIA E PONTEIRO
 Referência sempre tem de ser inicializada com uma variavel da qual vai ser sua
 cópia. A referência não pode ser mudada, ela recebe uma informação e muda o
 conteudo que foi passado como parametro.
+
+ABRIR E CRIAR FICHEIRO
+
+	ifstream — É uma classe ja criada em C++ para ler arquivos, usando como input
+quando passado como argumento.
+	(input file stream)
+	ofstream — É uma classe ja criada em C++ para escrever em arquivos, usando 
+como output quando criado. Podem retornar as informações de um file.
+	(output file stream)
+
+Logo depois que abrimos ou criamos um arquivo, precisamos checar se foi bem sucedido
+ou não, ai usamos a função is.open(). Ela retorna false se teve algum problema e
+true se não teve.
+
+ARRAY DE FUNÇÕES
+
+Usamos o & para guardar o endereço, o local onde está a função e o * procura nessa
+memória a função precisa.
+
+	Analogia:
+	&  →  "escreve o endereço no mapa"
+	*  →  "segue o mapa até ao destino"
+
+Sem parênteses:
+this->*comment[i]()
+O compilador tenta fazer comment[i]() primeiro — ou seja, tenta chamar a função antes de associar ao objeto. Isso dá erro!
+Com parênteses:
+(this->*comment[i])()
+Os parênteses forçam o compilador a fazer primeiro a associação this->*comment[i] e só depois chamar com ().
+É uma questão de precedência de operadores — tal como na matemática:
+2 + 3 * 4 = 14   (multiplica primeiro)
+(2 + 3) * 4 = 20 (parênteses forçam a soma primeiro)
+Os parênteses garantem a ordem correta das operações! 😄

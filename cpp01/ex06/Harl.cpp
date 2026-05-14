@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 16:35:21 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/14 11:09:53 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/05/12 13:51:57 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/05/12 14:23:07 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,32 +45,25 @@ void	Harl::error()
 	std::cout << "Harl: This is unacceptable! I want to speak to the manager now.\n";
 }
 
-void Harl::complain(std::string level)
+void	Harl::filter(int i)
 {
-	std::string tags[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	void (Harl::*actions[])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-
-	for(int i = 0; i < 4; i++)
+	switch (i)
 	{
-		if (level == tags[i])
+		case 0:
+			debug();
+		case 1:
+			info();
+		case 2:
+			warning();
+		case 3:
 		{
-			(this->*actions[i])();
-			break;
+			error();
+			break ;	
+		}
+		default:
+		{
+			std::cout << "Invalid Level.\n";
+			break ;
 		}
 	}
 }
-
-/* Traduções
-	! CONSTRUCTOR:
-"Harl está pronto para reclamar!"
-	! DEBUG:
-"Eu adoro ter bacon extra no meu hambúrguer 7XL-queijo-duplo-triple-pickle-especial-ketchup. Eu adoro mesmo!"
-	! INFO:
-"Não consigo acreditar que adicionar bacon extra custa mais dinheiro. Não puseste bacon suficiente
-no meu hambúrguer! Se tivesses posto, não estaria a pedir mais!"
-	! WARNING:
-"Acho que mereço ter bacon extra de graça. Venho aqui há anos, enquanto tu começaste a trabalhar aqui no mês passado."
-	! ERROR:
-"Isto é inaceitável! Quero falar com o gerente agora." 
-	! DESTRUCTOR:
-"Harl não tem mais nada de que reclamar." */

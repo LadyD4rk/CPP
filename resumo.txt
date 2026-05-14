@@ -95,4 +95,4 @@ Os parênteses forçam o compilador a fazer primeiro a associação this->*comme
 É uma questão de precedência de operadores — tal como na matemática:
 2 + 3 * 4 = 14   (multiplica primeiro)
 (2 + 3) * 4 = 20 (parênteses forçam a soma primeiro)
-Os parênteses garantem a ordem correta das operações! 😄
+

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 16:56:13 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/12 14:38:04 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/05/12 13:46:17 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/05/12 14:37:15 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	main()
 {
 	Harl		harl;
 	std::string	word;
-	std::string options[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	std::string	options[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int			i;
-
+	
 	std::cout << "What level would Harl like to complain at?" << std::endl;
 	std::cout << "Options:\n	->DEBUG\n	->INFO\n	->WARNING\n	->ERROR\n";
 	while(1)
@@ -30,11 +30,11 @@ int	main()
 			return (0);
 		if (word == "exit")
 			break;
-		while (i < 4)
+		while(i < 4)
 		{
 			if (word == options[i])
 			{
-				harl.complain(word);
+				harl.filter(i);
 				break;
 			}
 			i++;
@@ -43,4 +43,5 @@ int	main()
 			std::cout << "Invalid level.\n";
 	}
 	return (0);
+	
 }

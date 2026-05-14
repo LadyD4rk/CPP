@@ -5,42 +5,25 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 16:56:13 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/12 14:38:04 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/05/13 15:43:35 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/05/14 11:54:46 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Harl.hpp"
+#include <iostream>
+#include "Fixed.hpp"
 
-int	main()
+int	main(void)
 {
-	Harl		harl;
-	std::string	word;
-	std::string options[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	int			i;
+	Fixed	a;
+	Fixed	b(a);
+	Fixed	c;
 
-	std::cout << "What level would Harl like to complain at?" << std::endl;
-	std::cout << "Options:\n	->DEBUG\n	->INFO\n	->WARNING\n	->ERROR\n";
-	while(1)
-	{
-		i = 0;
-		std::cout << "->";
-		std::getline(std::cin, word);
-		if (std::cin.eof())
-			return (0);
-		if (word == "exit")
-			break;
-		while (i < 4)
-		{
-			if (word == options[i])
-			{
-				harl.complain(word);
-				break;
-			}
-			i++;
-		}
-		if (i == 4)
-			std::cout << "Invalid level.\n";
-	}
+	c = b;
+	
+	std::cout << a.getRawBits() << std::endl;
+	std::cout << b.getRawBits() << std::endl;
+	std::cout << c.getRawBits() << std::endl;
+
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 11:54:51 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/27 15:57:12 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/02 14:41:48 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,17 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int num)
 {
-	std::cout << "Int constructor called\n";
 	_value = num << _num_bits;
 }
 
 Fixed::Fixed(const float num)
 {
-	std::cout << "Float constructor called" << std::endl;
 	_value = roundf(num * (1 << _num_bits));
+}
+
+Fixed::Fixed(const Fixed &other)
+{
+	*this = other;
 }
 
 Fixed::~Fixed()
@@ -66,7 +69,6 @@ Fixed	&Fixed::operator=(const Fixed &other)
 {
 	if (this == &other)
 		return (*this);
-	std::cout << "Copy assignment operator called" << std::endl;
 	_value = other.getRawBits();
 	return (*this);
 }
@@ -172,4 +174,49 @@ Fixed	Fixed::operator++(void)
 {
 	(this->_value)++;
 	return (*this);
+}
+
+Fixed	Fixed::operator--(int)
+{
+	Fixed	tmp;
+
+	tmp.setRawBits(this->_value);
+	(this->_value)--;
+	return (tmp);
+}
+
+Fixed	Fixed::operator--(void)
+{
+	(this->_value)--;
+	return (*this);
+}
+
+// * Comparações
+
+Fixed	&Fixed::min(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return (a);
+	return (b);
+}
+
+const Fixed	&Fixed::min(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() < b.getRawBits())
+		return (a);
+	return (b);
+}
+
+Fixed	&Fixed::max(Fixed &a, Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return (a);
+	return (b);
+}
+
+const Fixed	&Fixed::max(const Fixed &a, const Fixed &b)
+{
+	if (a.getRawBits() > b.getRawBits())
+		return (a);
+	return (b);
 }

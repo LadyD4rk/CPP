@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/13 15:43:35 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/14 14:06:04 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/05/26 11:44:13 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,3 +33,4 @@ int main( void )
 	std::cout << "d is " << d.toInt() << " as integer" << std::endl;
 	return 0;
 }
+

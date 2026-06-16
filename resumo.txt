@@ -96,3 +96,18 @@ Os parênteses forçam o compilador a fazer primeiro a associação this->*comme
 2 + 3 * 4 = 14   (multiplica primeiro)
 (2 + 3) * 4 = 20 (parênteses forçam a soma primeiro)
 
+DIFERENÇA ENTRE PRIVACE VS PROTECTED
+
+	Privace: Só a própria classe acede.
+
+	Protected: A classe original e as filhas podem usar.
+
+COMO CHAMAR UM CONSTRUTOR COM OUTRO CONSTRUTOR
+
+Chama de maneira normal e depois voce coloca : e o nome do constructor que vai ser usado.
+
+ORDEM DE CONSTRUÇÃO E DESTRUIÇÃO
+
+Tem de aparecer primeiro o objeto "mãe" como se fosse a base de tudo, para depois os filhos serem chamados por cima para
+terminar de construir. E a destruição tem de ser de dentro pra fora, então primeiro tem de ser suas dependencias, depois
+o objeto base.

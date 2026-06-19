@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/20 12:22:16 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/19 11:52:28 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ void	PhoneBook::createPhoneBook()
 
 void	PhoneBook::printInformation(int i)
 {
-	std::cout << "\n	>FirstName:\n		- " << contact[i].Get_First() << std::endl;
+	std::cout << "	>FirstName:\n		- " << contact[i].Get_First() << std::endl;
 	std::cout << "	>LastName:\n		- " << contact[i].Get_Last() << std::endl;
 	std::cout << "	>NickName:\n		- " << contact[i].Get_Nick() << std::endl;
 	std::cout << "	>Phone Number:\n		- " << contact[i].Get_Phone() << std::endl;

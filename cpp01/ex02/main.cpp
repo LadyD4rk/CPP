@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:02:53 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/29 11:17:23 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/19 12:09:26 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int main()
     std::string *stringPTR = &string;
     std::string &stringREF = string;
     
-    std::cout << "Variable \"Brain\" address:" << &string << "\n";
-    std::cout << "Pointer address:" << stringPTR << "\n";
-    std::cout << "Reference address:" << &stringREF << "\n\n";
+    std::cout << "Variable Brain address:" << &string << "\n";
+    std::cout << "* address:" << stringPTR << "\n";
+    std::cout << "& address:" << &stringREF << "\n\n";
     
-    std::cout << "Variable \"Brain\" value:" << string << "\n";
-    std::cout << "Pointer value:" << stringPTR << "\n";
-    std::cout << "Reference value:" << stringREF << "\n";
+    std::cout << "Variable Brain value:" << string << "\n";
+    std::cout << "* value:" << stringPTR << "\n";
+    std::cout << "& value:" << stringREF << "\n";
 	return (0);
 }
 

@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 19:39:59 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 11:47:29 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/17 17:06:18 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/06/18 13:54:09 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int	main(int ac, char **av)
+# include <iostream>
+# include <string>
+# include "Animal.hpp"
+
+class Cat : public Animal
 {
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int i = 1; i < ac; i++)
-		{
-			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
-			if (i < ac - 1)
-				std::cout << " ";
-		}
-	}
-	return (0);
-}
+	public:
+		Cat();
+		Cat(const Cat &other);
+		Cat	&operator=(const Cat &other);
+		~Cat();
+		void	makeSound() const;
+
+	private:
+};
+
+
+#endif

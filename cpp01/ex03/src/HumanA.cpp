@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 11:45:30 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/30 12:22:04 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/19 12:16:24 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,6 @@ HumanA::~HumanA()
 
 void	HumanA::attack()
 {
-	std::cout << name << " attacks with " << type.getType() << std::endl;
+	std::cout << name << " attacks with their " << type.getType() << std::endl;
 }
 

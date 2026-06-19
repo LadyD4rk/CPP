@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 19:39:59 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 11:47:29 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/17 15:21:31 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/06/18 15:36:26 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
+#ifndef HEADER_HPP
+# define HEADER_HPP
 
-int	main(int ac, char **av)
-{
-	if (ac == 1)
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-	else
-	{
-		for (int i = 1; i < ac; i++)
-		{
-			for (int j = 0; av[i][j]; j++)
-				std::cout << (char)toupper(av[i][j]);
-			if (i < ac - 1)
-				std::cout << " ";
-		}
-	}
-	return (0);
-}
+# include "src/Animal.hpp"
+# include "src/Dog.hpp"
+# include "src/Cat.hpp"
+
+# define BLUE "\033[1;34m"
+# define WHITE "\033[0m"
+
+#endif

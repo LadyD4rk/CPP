@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.hpp                                         :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/17 15:21:31 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/22 15:48:04 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/22 16:18:16 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/06/22 17:51:03 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_HPP
-# define HEADER_HPP
+#ifndef BRAIN_HPP
+# define BRAIN_HPP
 
-# include "src/Animal.hpp"
-# include "src/Dog.hpp"
-# include "src/Cat.hpp"
-# include "src/WrongAnimal.hpp"
-# include "src/WrongCat.hpp"
+# include <iostream>
+# include <string>
 
-# define BLUE "\033[1;34m"
-# define WHITE "\033[0m"
+class Brain
+{
+	public:
+		Brain();
+		Brain(const Brain &other);
+		Brain &operator=(const Brain &other);
+		virtual ~Brain();
+		void	setIdea(int index, std::string idea);
+		std::string	getIdea(int index);
+		void	printBrain();
+		
+	private:
+		std::string	_ideas[100];
+};
 
 #endif

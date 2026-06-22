@@ -9,7 +9,8 @@ RESET = \033[0m
 #flags
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -Wno-implicit-fallthrough -std=c++98
-SRC_FILES = src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp src/WrongCat.cpp
+SRC_FILES = src/Animal.cpp src/Cat.cpp src/Dog.cpp src/WrongAnimal.cpp \
+		src/WrongCat.cpp src/Brain.cpp
 EXEC = Animals
 OBJ_DIR = Obj
 

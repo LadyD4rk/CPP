@@ -1,44 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongWrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/17 16:28:39 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 12:41:05 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/22 15:43:20 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/06/22 15:43:22 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog() : Animal()
+WrongCat::WrongCat() : WrongAnimal()
 {
-	type = "Dog";
-	std::cout << "Dog created, ready to fetch!" << std::endl;
+	type = "WrongCat";
+	std::cout << "WrongCat created, ready to nap!" << std::endl;
 }
 
-Dog::Dog(const Dog &other) : Animal(other)
+WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 {
 	*this = other;
 }
 
-Dog	&Dog::operator=(const Dog &other)
+WrongCat	&WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
 		type = other.type + "_son";
 	return *this;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	std::cout << "Dog destroyed, no more fetching." << std::endl;
+	std::cout << "WrongCat destroyed, naptime is over." << std::endl;
 }
 
-void	Dog::makeSound() const
+void	WrongCat::makeSound() const
 {
-	std::cout << "Au Au Au" << std::endl;
+	std::cout << "Au Au?????" << std::endl;
 }
-
-// Cachorro criado, pronto para buscar a bolinha!
-// Cachorro destruido, não vai mais buscar a bolinha.

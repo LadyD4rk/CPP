@@ -1,25 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/17 15:21:31 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/22 15:48:04 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/17 16:23:38 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/06/22 18:59:14 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HEADER_HPP
-# define HEADER_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
-# include "src/Animal.hpp"
-# include "src/Dog.hpp"
-# include "src/Cat.hpp"
-# include "src/WrongAnimal.hpp"
-# include "src/WrongCat.hpp"
+# include <iostream>
+# include <string>
+# include "Animal.hpp"
+# include "Brain.hpp"
 
-# define BLUE "\033[1;34m"
-# define WHITE "\033[0m"
+class Dog : public Animal
+{
+	public:
+		Dog();
+		Dog(const Dog &other);
+		Dog &operator=(const Dog &other);
+		~Dog();
+		void	makeSound() const;
+		void	createIdeas();
+		std::string	ideaDog(int i);
+		void	getBrainDog();
+		void	setBrainDog(int index, std::string idea);
+
+	private:
+		Brain*	_brain;
+};
 
 #endif

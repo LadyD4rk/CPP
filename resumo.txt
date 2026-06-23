@@ -88,10 +88,12 @@ memória a função precisa.
 
 Sem parênteses:
 this->*comment[i]()
-O compilador tenta fazer comment[i]() primeiro — ou seja, tenta chamar a função antes de associar ao objeto. Isso dá erro!
+O compilador tenta fazer comment[i]() primeiro — ou seja, tenta chamar a função antes
+de associar ao objeto. Isso dá erro!
 Com parênteses:
 (this->*comment[i])()
-Os parênteses forçam o compilador a fazer primeiro a associação this->*comment[i] e só depois chamar com ().
+Os parênteses forçam o compilador a fazer primeiro a associação this->*comment[i] e só
+depois chamar com ().
 É uma questão de precedência de operadores — tal como na matemática:
 2 + 3 * 4 = 14   (multiplica primeiro)
 (2 + 3) * 4 = 20 (parênteses forçam a soma primeiro)
@@ -108,16 +110,21 @@ Chama de maneira normal e depois voce coloca : e o nome do constructor que vai s
 
 ORDEM DE CONSTRUÇÃO E DESTRUIÇÃO
 
-Tem de aparecer primeiro o objeto "mãe" como se fosse a base de tudo, para depois os filhos serem chamados por cima para
-terminar de construir. E a destruição tem de ser de dentro pra fora, então primeiro tem de ser suas dependencias, depois
+Tem de aparecer primeiro o objeto "mãe" como se fosse a base de tudo, para depois os
+filhos serem chamados por cima para
+terminar de construir. E a destruição tem de ser de dentro pra fora, então primeiro
+tem de ser suas dependencias, depois
 o objeto base.
 
 CLASSE ABSTRATA
-Uma classe abstrata em C++ é uma classe que serve como base para outras classes e não pode ser instanciada diretamente. O
-seu principal objetivo é definis uma interface comum para as classes derivadas, forçando-as a implemnetar determinados métodos.
+Uma classe abstrata em C++ é uma classe que serve como base para outras classes e não
+pode ser instanciada diretamente. O
+seu principal objetivo é definis uma interface comum para as classes derivadas,
+forçando-as a implemnetar determinados métodos.
 Isso é feito por meio de funções virtuais puras, declaradas com o operator = 0.
 Para tornar uma classe abstrata só é preciso declarar função virtual pura.
 	PONTOS:
 	-> Contém pelo menos uma função virtual pura (= 0);
 	-> Obriga as classes derivadas a fornecer uma implementação.
-	-> Não pode ser instanciada, mas pode servir como ponteiro ou referência para objetos das classes derivadas.
+	-> Não pode ser instanciada, mas pode servir como ponteiro ou referência para
+objetos das classes derivadas.

@@ -111,3 +111,13 @@ ORDEM DE CONSTRUÇÃO E DESTRUIÇÃO
 Tem de aparecer primeiro o objeto "mãe" como se fosse a base de tudo, para depois os filhos serem chamados por cima para
 terminar de construir. E a destruição tem de ser de dentro pra fora, então primeiro tem de ser suas dependencias, depois
 o objeto base.
+
+CLASSE ABSTRATA
+Uma classe abstrata em C++ é uma classe que serve como base para outras classes e não pode ser instanciada diretamente. O
+seu principal objetivo é definis uma interface comum para as classes derivadas, forçando-as a implemnetar determinados métodos.
+Isso é feito por meio de funções virtuais puras, declaradas com o operator = 0.
+Para tornar uma classe abstrata só é preciso declarar função virtual pura.
+	PONTOS:
+	-> Contém pelo menos uma função virtual pura (= 0);
+	-> Obriga as classes derivadas a fornecer uma implementação.
+	-> Não pode ser instanciada, mas pode servir como ponteiro ou referência para objetos das classes derivadas.

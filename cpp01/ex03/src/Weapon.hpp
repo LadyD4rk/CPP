@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 11:22:06 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/30 12:21:23 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:13:39 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Weapon{
 		std::string	getType();
 
 	private:
-		std::string		type;
+		std::string		_type;
 };
 
 #endif

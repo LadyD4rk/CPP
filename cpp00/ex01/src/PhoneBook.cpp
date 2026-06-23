@@ -6,13 +6,13 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 11:52:28 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:20:15 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-std::string PhoneBook::GetInput(std::string str)
+std::string PhoneBook::getInput(std::string str)
 {
 	std::string input;
 
@@ -20,34 +20,35 @@ std::string PhoneBook::GetInput(std::string str)
 	if (!std::getline(std::cin, input))
 		if (std::cin.eof())
 			exit(0);
+	std::cout << "result (" << input << ")" << std::endl; 
 	return input;
 }
 
-void	PhoneBook::Get_All()
+void	PhoneBook::getAll()
 {
 	num_cont = 0;
 	for (int i = 0; i < MAX_CONTACTS; i++)
-		contact[i].Init_Check();
+		contact[i].initCheck();
 }
 
 void	PhoneBook::add()
 {
- 	std::string	First_Name = GetInput("	>First Name: ");
-	std::string	Last_Name = GetInput("	>Last Name: ");
-	std::string	Nick_Name = GetInput("	>Nickname: ");
-	std::string	Phone_Number = GetInput("	>Phone Number: ");
-	std::string	DarkSecret = GetInput("	>Dark Secret: ");
+ 	std::string	_firstname = getInput("	>First Name: ");
+	std::string	_lastname = getInput("	>Last Name: ");
+	std::string	_nickname = getInput("	>Nickname: ");
+	std::string	_phonenumber = getInput("	>Phone Number: ");
+	std::string	_darksecret = getInput("	>Dark Secret: ");
 
-	contact[num_cont % MAX_CONTACTS].Set_First(First_Name);
-	contact[num_cont % MAX_CONTACTS].Set_Last(Last_Name);
-	contact[num_cont % MAX_CONTACTS].Set_Nick(Nick_Name);
-	contact[num_cont % MAX_CONTACTS].Set_Number(Phone_Number);
-	contact[num_cont % MAX_CONTACTS].Set_DarkSecret(DarkSecret);
-	contact[num_cont % MAX_CONTACTS].Set_Check();
+	contact[num_cont % MAX_CONTACTS].setFirst(_firstname);
+	contact[num_cont % MAX_CONTACTS].setLast(_lastname);
+	contact[num_cont % MAX_CONTACTS].setNick(_nickname);
+	contact[num_cont % MAX_CONTACTS].setNumber(_phonenumber);
+	contact[num_cont % MAX_CONTACTS].setDarkSecret(_darksecret);
+	contact[num_cont % MAX_CONTACTS].setCheck();
 	num_cont++;
 }
 
-int		check_numb(std::string number)
+int		checkNumb(std::string number)
 {
 	for (int i = 0; number[i]; i++)
 		if (number[i] < '0' || number[i] > '9')
@@ -64,31 +65,35 @@ std::string	createString(std::string str)
 
 void	PhoneBook::createPhoneBook()
 {
-	std::cout << "|————————————————————————————————————————————————|" << std::endl;
-	std::cout << "|                   PHONEBOOK                    |" << std::endl;
-	std::cout << "|————————————————————————————————————————————————|" << std::endl;
+	std::cout << "|—————————————————————————————————————|" << std::endl;
+	std::cout << "|              PHONEBOOK              |" << std::endl;
+	std::cout << "|—————————————————————————————————————|" << std::endl;
 	std::cout << "|" << " idx" << "|" << std::setw(10) << "FirstName"
 			<< "|" << std::setw(10) << "LastName" << "|" << std::setw(10)
-			<< "Nickname" << "|" << std::setw(10) << "Phone" << "|" << std::endl;
-	for (int i = 0; contact[i].Get_Check() == true; i++)
+			<< "NickName" << "|"<< std::endl;
+	for (int i = 0; contact[i].getCheck() == true; i++)
 	{
 		std::cout << "|   " << i + 1;
-		std::cout << "|" << std::setw(10) << createString(contact[i].Get_First());
-		std::cout << "|" << std::setw(10) << createString(contact[i].Get_Last());
-		std::cout << "|" << std::setw(10) << createString(contact[i].Get_Nick());
-		std::cout << "|" << std::setw(10) << createString(contact[i].Get_Phone());
-		std::cout << "|\n";
+		std::cout << "|" << std::setw(10) << createString(contact[i].getFirst());
+		std::cout << "|" << std::setw(10) << createString(contact[i].getLast());
+		std::cout << "|" << std::setw(10) << createString(contact[i].getNick());
+		std::cout << std::endl;
 	}
-	std::cout << "|————————————————————————————————————————————————|" << std::endl;
+	std::cout << "|—————————————————————————————————————|" << std::endl;
 }
 
 void	PhoneBook::printInformation(int i)
 {
-	std::cout << "	>FirstName:\n		- " << contact[i].Get_First() << std::endl;
-	std::cout << "	>LastName:\n		- " << contact[i].Get_Last() << std::endl;
-	std::cout << "	>NickName:\n		- " << contact[i].Get_Nick() << std::endl;
-	std::cout << "	>Phone Number:\n		- " << contact[i].Get_Phone() << std::endl;
-	std::cout << "	>Dark Secret:\n		- " << contact[i].Get_Dark() << std::endl;
+	std::cout << "	>FirstName:" << std::endl;
+	std::cout << "		- " << contact[i].getFirst() << std::endl;
+	std::cout << "	>LastName: " << std::endl;
+	std::cout << "		- " << contact[i].getLast() << std::endl;
+	std::cout << "	>Nickname:" << std::endl;
+	std::cout << "		- " << contact[i].getNick() << std::endl;
+	std::cout << "	>Phone Number:" << std::endl;
+	std::cout << "		- " << contact[i].getPhone() << std::endl;
+	std::cout << "	>Dark Secret:" << std::endl; 
+	std::cout << "		- " << contact[i].getDarkSecret() << std::endl;
 }
 
 void	PhoneBook::search()
@@ -108,18 +113,18 @@ void	PhoneBook::search()
 		if (!std::getline(std::cin, num))
 			if (std::cin.eof())
 				exit(0);
-		if (!check_numb(num))
-			std::cout << "	ERROR: Invalid Character.\n";
+		if (!checkNumb(num))
+			std::cout << "	ERROR: Invalid Character." << std::endl;
 		else
 		{
 			i = atoi(num.c_str()) - 1;
 			if (i > 7 || i < 0)
-				std::cout << "	ERROR: Invalid Number.\n";
+				std::cout << "	ERROR: Invalid Number." << std::endl;
 			else
 				break;
 		}
 	}
-	if (contact[i].Get_Check() == false)
+	if (contact[i].getCheck() == false)
 		std::cout << "	ERROR: That contact doesn't exist." << std::endl;
 	else
 		printInformation(i);

@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:46:17 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/12 14:37:15 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 18:23:57 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main()
 	int			i;
 	
 	std::cout << "What level would Harl like to complain at?" << std::endl;
-	std::cout << "Options:\n	->DEBUG\n	->INFO\n	->WARNING\n	->ERROR\n";
+	std::cout << "Options:\n	->DEBUG\n	->INFO\n	->WARNING\n	->ERROR" << std::endl;
 	while(1)
 	{
 		i = 0;
@@ -40,7 +40,7 @@ int	main()
 			i++;
 		}
 		if (i == 4)
-			std::cout << "Invalid level.\n";
+			std::cout << "Invalid level." << std::endl;
 	}
 	return (0);
 	

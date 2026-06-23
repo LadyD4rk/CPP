@@ -6,41 +6,9 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:38:07 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/07 17:04:57 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:22:26 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*
-General 42 decidiu fazer uma guerra...
-E chamou os dois soldados Jorge e Armindo.
-Jorge gritou...
-Jorge: BraiiiiiiinnnzzzZ...
-Armindo gritou...
-Armindo: BraiiiiiiinnnzzzZ...
-Jorge tomou o tiro e morreu.
-Armindo pediu ajuda. 
-Você vai salvar o Armindo...
-Yes or No?
-Yes: Armindo tomou o tiro e morreu
-No: Armindo fugiu.
-
-General 42 decided to start a war...
-So he called in two soldiers: Jorge and Armindo.
-
-Jorge shouted...
-Jorge: BraiiiiiiinnnzzzZ...
-Armindo shouted...
-Armindo: BraiiiiiiinnnzzzZ...
-
-Jorge got shot and died.
-Armindo asked for help.
-
-Will you save Armindo...
-Yes or No?
-
-Yes: Armindo got shot and died.
-No: Armindo ran away.
-*/
 
 #include "Zombie.hpp"
 
@@ -57,7 +25,8 @@ int	main(int ac, char **av)
 	randomChump("Jorge");
 	zombie = newZombie("Armindo");
 	zombie->newZombieAnnounce();
-	std::cout << "Yes or No?\n-> ";
+	std::cout << "Yes or No?" << std::endl;
+	std::cout << "-> ";
 	while (1)
 	{
 		std::getline(std::cin, word);
@@ -70,12 +39,31 @@ int	main(int ac, char **av)
 		}
 		else if (!strcmp(word.c_str(), "yes"))
 		{
-			std::cout << "Armindo ran away\n";
+			std::cout << "Armindo ran away" << std::endl;
 			break;
 		}
 		else
-			std::cout << "wrong answer\n -> ";
+		{
+			std::cout << "wrong answer" << std::endl;
+			std::cout << "-> " << std::endl;
+
+		}
 	}
-	std::cout << "*End History!!!*\n";
+	std::cout << "*End History!!!*" << std::endl;
 	return (0);
 }
+
+/*
+General 42 decidiu fazer uma guerra...
+E chamou os dois soldados Jorge e Armindo.
+Jorge gritou...
+Jorge: BraiiiiiiinnnzzzZ...
+Armindo gritou...
+Armindo: BraiiiiiiinnnzzzZ...
+Jorge tomou o tiro e morreu.
+Armindo pediu ajuda. 
+Você vai salvar o Armindo...
+Yes or No?
+Yes: Armindo tomou o tiro e morreu
+No: Armindo fugiu.
+*/

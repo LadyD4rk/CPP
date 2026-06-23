@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 11:41:59 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/30 12:21:12 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:13:48 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Weapon::Weapon(std::string type)
 {
-	this->type = type;
+	this->_type = type;
 }
 
 Weapon::~Weapon()
@@ -23,10 +23,10 @@ Weapon::~Weapon()
 
 void	Weapon::setType(std::string new_type)
 {
-	type = new_type;
+	_type = new_type;
 }
 
 std::string	Weapon::getType()
 {
-	return (type);
+	return _type;
 }

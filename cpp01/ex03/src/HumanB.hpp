@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:04:12 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/30 12:24:43 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:13:18 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ class HumanB
 		void	setWeapon(Weapon& type);
 		void	attack();
 	private:
-		std::string		name;
-		Weapon*			type;
+		std::string		_name;
+		Weapon*			_type;
 };
 
 #endif

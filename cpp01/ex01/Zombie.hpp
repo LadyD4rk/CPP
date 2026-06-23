@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:25:43 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/21 14:50:49 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:12:32 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie{
 		void	announce();
 
 	private:
-		std::string	name;
+		std::string	_name;
 };
 
 Zombie* zombieHorde(int N, std::string name);

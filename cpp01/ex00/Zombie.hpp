@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:38:30 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/21 14:25:37 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:11:25 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Zombie{
 		void	announce();
 
 	private:
-		std::string	name;
+		std::string	_name;
 };
 
 void 	randomChump(std::string name);

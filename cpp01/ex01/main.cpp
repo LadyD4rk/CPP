@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:26:03 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/21 16:33:29 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 18:19:49 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ Jorge got shot and died.
 
 */
 
-int		check_numb(char *number)
+int		checkNumb(char *number)
 {
 	for (int i = 0; number[i]; i++)
 		if (number[i] < '0' || number[i] > '9')
@@ -48,22 +48,22 @@ int	main(int ac, char **av)
 	Zombie	*horde;
 	
 	(void)ac;
-	if (ac != 3 || !check_numb(av[1]))
+	if (ac != 3 || !checkNumb(av[1]))
 	{
-		std::cerr << "Error: Invalid Parameters.\n";
+		std::cerr << "Error: Invalid Parameters." << std::endl;
 		return (1);
 	}
 	else
 	{
 		n = atoi(av[1]);
-		std::cout << "General 42 decided to start a war...\n";
+		std::cout << "General 42 decided to start a war..." << std::endl;
 		std::cout << "And called in " << n << " zombie soldiers, all named "
-		<< av[2] << ".\nThey all shouted...\n";
+		<< av[2] << ".\nThey all shouted..."<< std::endl;
 		horde = zombieHorde(n, av[2]);
 		for (int i = 0; i < n; i++)
 			horde[i].announce();
 	}
 	delete[] horde;
-	std::cout << "*End History!!!*\n";
+	std::cout << "*End History!!!*" << std::endl;
 	return (0);
 }

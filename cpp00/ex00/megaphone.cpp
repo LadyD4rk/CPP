@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 19:39:59 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 11:47:29 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 14:03:24 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	main(int ac, char **av)
 				std::cout << " ";
 		}
 	}
+	std::cout << std::endl;
 	return (0);
 }

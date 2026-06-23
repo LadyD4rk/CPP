@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:36:49 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/20 12:19:55 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 16:59:25 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,26 +21,26 @@
 class Contact
 {
 	public:
-		void	Init_Check();
-		void	Set_First(std::string name);
-		void	Set_Last(std::string name);
-		void	Set_Nick(std::string name);
-		void	Set_Number(std::string name);
-		void	Set_DarkSecret(std::string name);
-		void	Set_Check();
-		std::string	Get_First();
-		std::string	Get_Last();
-		std::string	Get_Nick();
-		std::string	Get_Phone();
-		std::string	Get_Dark();
-		bool		Get_Check();
+		void	initCheck();
+		void	setFirst(std::string name);
+		void	setLast(std::string name);
+		void	setNick(std::string name);
+		void	setNumber(std::string name);
+		void	setDarkSecret(std::string name);
+		void	setCheck();
+		std::string	getFirst();
+		std::string	getLast();
+		std::string	getNick();
+		std::string	getPhone();
+		std::string	getDarkSecret();
+		bool		getCheck();
 
 	private:
-		std::string	first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string	phonenum;
-		std::string darksecret;
+		std::string	_firstname;
+		std::string _lastname;
+		std::string _nickname;
+		std::string	_phonenum;
+		std::string _darksecret;
 		bool		check;
 };
 

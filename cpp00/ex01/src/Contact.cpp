@@ -6,73 +6,73 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 23:37:46 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/20 12:20:02 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 16:59:18 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-void	Contact::Init_Check()
+void	Contact::initCheck()
 {
 	check = false;
 }
 
-void	Contact::Set_First(std::string name)
+void	Contact::setFirst(std::string name)
 {
-	first_name = name;
+	_firstname = name;
 }
 
-void	Contact::Set_Last(std::string name)
+void	Contact::setLast(std::string name)
 {
-	last_name = name;
+	_lastname = name;
 }
 
-void	Contact::Set_Nick(std::string name)
+void	Contact::setNick(std::string name)
 {
-	nickname = name;
+	_nickname = name;
 }
 
-void	Contact::Set_Number(std::string name)
+void	Contact::setNumber(std::string name)
 {
-	phonenum = name;
+	_phonenum = name;
 }
 
-void	Contact::Set_DarkSecret(std::string name)
+void	Contact::setDarkSecret(std::string name)
 {
-	darksecret = name;
+	_darksecret = name;
 }
 
-void	Contact::Set_Check()
+void	Contact::setCheck()
 {
 	check = true;
 }
 
-std::string	Contact::Get_First()
+std::string	Contact::getFirst()
 {
-	return (first_name);
+	return (_firstname);
 }
 
-std::string	Contact::Get_Last()
+std::string	Contact::getLast()
 {
-	return (last_name);
+	return (_lastname);
 }
 
-std::string	Contact::Get_Nick()
+std::string	Contact::getNick()
 {
-	return (nickname);
+	return (_nickname);
 }
 
-std::string	Contact::Get_Phone()
+std::string	Contact::getPhone()
 {
-	return (phonenum);
+	return (_phonenum);
 }
 
-std::string	Contact::Get_Dark()
+std::string	Contact::getDarkSecret()
 {
-	return (darksecret);
+	return (_darksecret);
 }
 
-bool	Contact::Get_Check()
+bool	Contact::getCheck()
 {
 	return (check);
 }

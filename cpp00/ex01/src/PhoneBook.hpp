@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:29:51 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/20 12:03:44 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:05:49 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ class PhoneBook
 	public:
 		void		add();
 		void		search();
-		void		Get_All();
-		std::string GetInput(std::string str);
+		void		getAll();
+		std::string getInput(std::string str);
 		void		createPhoneBook();
 		void		printInformation(int i);
 	private:

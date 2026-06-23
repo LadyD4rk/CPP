@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 11:54:51 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/26 11:46:27 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 18:24:25 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ Fixed::Fixed()
 
 Fixed::Fixed(const int num)
 {
-	std::cout << "Int constructor called\n";
+	std::cout << "Int constructor called" << std::endl;
 	_value = num << _num_bits;
 }
 

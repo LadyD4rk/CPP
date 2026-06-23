@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:05:35 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/04/20 15:11:12 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 17:06:36 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	main(int ac, char **av)
 {
 	PhoneBook	book;
-	book.Get_All();
+	book.getAll();
 
 	if (ac != 1)
 		return (0);

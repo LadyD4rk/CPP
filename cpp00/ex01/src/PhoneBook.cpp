@@ -6,11 +6,32 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 17:20:15 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/23 18:54:13 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+
+int		checkNumb(std::string number)
+{
+	for (int i = 0; number[i]; i++)
+		if (number[i] < '0' || number[i] > '9')
+			return (0);
+	return (1);
+}
+
+std::string	getInputNumber(std::string str)
+{
+	std::string	input;
+	
+	std::cout << str;
+	if (!std::getline(std::cin, input))
+		if (std::cin.eof())
+			exit(0);
+	if (checkNumb(input) == 0)
+		return "";
+	return input;
+}
 
 std::string PhoneBook::getInput(std::string str)
 {
@@ -20,7 +41,8 @@ std::string PhoneBook::getInput(std::string str)
 	if (!std::getline(std::cin, input))
 		if (std::cin.eof())
 			exit(0);
-	std::cout << "result (" << input << ")" << std::endl; 
+	if (input.empty())
+		return "";
 	return input;
 }
 
@@ -35,10 +57,16 @@ void	PhoneBook::add()
 {
  	std::string	_firstname = getInput("	>First Name: ");
 	std::string	_lastname = getInput("	>Last Name: ");
+	std::string	_phonenumber = getInputNumber("	>Phone Number: ");
 	std::string	_nickname = getInput("	>Nickname: ");
-	std::string	_phonenumber = getInput("	>Phone Number: ");
 	std::string	_darksecret = getInput("	>Dark Secret: ");
 
+	if (_phonenumber.empty() || _firstname.empty() || _lastname.empty()
+		|| _nickname.empty() || _darksecret.empty())
+	{
+		std::cout << "ERROR: Contact contains invalid data." << std::endl;
+		return ;
+	}
 	contact[num_cont % MAX_CONTACTS].setFirst(_firstname);
 	contact[num_cont % MAX_CONTACTS].setLast(_lastname);
 	contact[num_cont % MAX_CONTACTS].setNick(_nickname);
@@ -46,14 +74,6 @@ void	PhoneBook::add()
 	contact[num_cont % MAX_CONTACTS].setDarkSecret(_darksecret);
 	contact[num_cont % MAX_CONTACTS].setCheck();
 	num_cont++;
-}
-
-int		checkNumb(std::string number)
-{
-	for (int i = 0; number[i]; i++)
-		if (number[i] < '0' || number[i] > '9')
-			return (0);
-	return (1);
 }
 
 std::string	createString(std::string str)

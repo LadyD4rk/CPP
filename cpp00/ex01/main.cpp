@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:05:35 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 17:06:36 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/24 15:01:39 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,6 @@ int	main(int ac, char **av)
 		std::getline(std::cin, cmd);
 		if (std::cin.eof())
 			return (0);
-		for(int i = 0; cmd[i]; i++)
-			cmd[i] = (char)toupper(cmd[i]);
 		if (!strcmp(cmd.c_str(), "ADD"))
 			book.add();
 		else if (!strcmp(cmd.c_str(), "SEARCH"))

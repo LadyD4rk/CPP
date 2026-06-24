@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:54:13 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/06/24 12:30:09 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ void	PhoneBook::createPhoneBook()
 	std::cout << "|" << " idx" << "|" << std::setw(10) << "FirstName"
 			<< "|" << std::setw(10) << "LastName" << "|" << std::setw(10)
 			<< "NickName" << "|"<< std::endl;
-	for (int i = 0; contact[i].getCheck() == true; i++)
+	for (int i = 0; contact[i].getCheck() == true && i < 8; i++)
 	{
 		std::cout << "|   " << i + 1;
 		std::cout << "|" << std::setw(10) << createString(contact[i].getFirst());

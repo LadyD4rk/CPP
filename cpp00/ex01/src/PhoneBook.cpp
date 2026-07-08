@@ -6,7 +6,11 @@
 /*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2026/07/08 16:15:06 by jobraga-         ###   ########.fr       */
+=======
+/*   Updated: 2026/06/24 15:02:40 by jobraga-         ###   ########.fr       */
+>>>>>>> refs/remotes/origin/main
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +95,11 @@ void	PhoneBook::createPhoneBook()
 	std::cout << "|" << " idx" << "|" << std::setw(10) << "FirstName"
 			<< "|" << std::setw(10) << "LastName" << "|" << std::setw(10)
 			<< "NickName" << "|"<< std::endl;
+<<<<<<< HEAD
 	for (int i = 0; contact[i].getCheck() == true && i < 8; i++)
+=======
+	for (int i = 0; contact[i].getCheck() == true && i < MAX_CONTACTS; i++)
+>>>>>>> refs/remotes/origin/main
 	{
 		std::cout << "|   " << i + 1;
 		std::cout << "|" << std::setw(10) << createString(contact[i].getFirst());

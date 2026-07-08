@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/05 13:12:27 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/07 15:56:39 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 02:46:12 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ int main(int ac, char **av)
 	old_str = av[2];
 	new_str = av[3];
 	content = contentFile(av[1]);
+	if (content.empty())
+	{
+		return (0);
+	}
 	replace = searchAndReplace(content, old_str, new_str);
 	newFile(av[1], replace);
 	return (0);

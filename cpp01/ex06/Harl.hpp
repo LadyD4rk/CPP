@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:46:31 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/12 14:28:06 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 03:04:07 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Harl
 		void	info();
 		void	warning();
 		void	error();
-		void	filter(int i);
+		void	filter(std::string name);
 	private:
 };
 

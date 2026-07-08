@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:46:17 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:23:57 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 03:08:00 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,7 @@ int	main()
 			return (0);
 		if (word == "exit")
 			break;
-		while(i < 4)
-		{
-			if (word == options[i])
-			{
-				harl.filter(i);
-				break;
-			}
-			i++;
-		}
-		if (i == 4)
-			std::cout << "Invalid level." << std::endl;
+		harl.filter(word);
 	}
 	return (0);
 	

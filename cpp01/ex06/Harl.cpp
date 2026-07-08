@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:51:57 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:23:36 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 03:08:44 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,17 @@ void	Harl::error()
 	std::cout << "Harl: This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-void	Harl::filter(int i)
+void	Harl::filter(std::string word)
 {
+	int		i = 0;
+	std::string	options[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+
+	while (i < 4)
+	{
+		if (word == options[i])
+			break;
+		i++;
+	}
 	switch (i)
 	{
 		case 0:
@@ -58,9 +67,9 @@ void	Harl::filter(int i)
 		case 3:
 		{
 			error();
-			break ;	
+			break;
 		}
 		default:
-			std::cout << "Invalid Level." << std::endl;
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }

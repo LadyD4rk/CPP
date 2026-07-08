@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FileManager.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 15:28:21 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:21:37 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 02:47:03 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ std::string	contentFile(char *namefile)
 	if (!file.is_open())
 	{
 		std::cout << "Error file" << std::endl;
-		return (NULL); 
+		return (""); 
 	}
 	while (std::getline(file, line))
 	{

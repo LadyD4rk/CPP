@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/24 12:30:09 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/08 16:15:06 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	PhoneBook::createPhoneBook()
 		std::cout << "|" << std::setw(10) << createString(contact[i].getFirst());
 		std::cout << "|" << std::setw(10) << createString(contact[i].getLast());
 		std::cout << "|" << std::setw(10) << createString(contact[i].getNick());
-		std::cout << std::endl;
+		std::cout << "|" << std::endl;
 	}
 	std::cout << "|—————————————————————————————————————|" << std::endl;
 }

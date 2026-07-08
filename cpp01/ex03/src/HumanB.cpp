@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 12:04:06 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 17:13:28 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/02 02:39:08 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,8 @@ void	HumanB::setWeapon(Weapon& type)
 
 void	HumanB::attack()
 {
-	std::cout << _name << " attacks with their " << _type->getType() << std::endl;
+	if(_type == NULL)
+		std::cout << _name << " nao tem arma" << std::endl;
+	else
+		std::cout << _name << " attacks with their " << _type->getType() << std::endl;
 }

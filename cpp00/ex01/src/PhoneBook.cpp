@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/07/08 16:15:06 by jobraga-         ###   ########.fr       */
-=======
-/*   Updated: 2026/06/24 15:02:40 by jobraga-         ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Updated: 2026/07/13 13:05:04 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,20 +35,20 @@ std::string	getInputNumber(std::string str)
 
 std::string PhoneBook::getInput(std::string str)
 {
-	std::string input;
-
 	std::cout << str;
-	if (!std::getline(std::cin, input))
+	std::string input;
+	std::getline(std::cin, input);
+	if (!std::cin)
+	{
 		if (std::cin.eof())
 			exit(0);
-	if (input.empty())
-		return "";
+	}
 	return input;
 }
 
 void	PhoneBook::getAll()
 {
-	num_cont = 0;
+	_limit_numb = 0;
 	for (int i = 0; i < MAX_CONTACTS; i++)
 		contact[i].initCheck();
 }
@@ -71,13 +67,13 @@ void	PhoneBook::add()
 		std::cout << "ERROR: Contact contains invalid data." << std::endl;
 		return ;
 	}
-	contact[num_cont % MAX_CONTACTS].setFirst(_firstname);
-	contact[num_cont % MAX_CONTACTS].setLast(_lastname);
-	contact[num_cont % MAX_CONTACTS].setNick(_nickname);
-	contact[num_cont % MAX_CONTACTS].setNumber(_phonenumber);
-	contact[num_cont % MAX_CONTACTS].setDarkSecret(_darksecret);
-	contact[num_cont % MAX_CONTACTS].setCheck();
-	num_cont++;
+	contact[_limit_numb % MAX_CONTACTS].setFirst(_firstname);
+	contact[_limit_numb % MAX_CONTACTS].setLast(_lastname);
+	contact[_limit_numb % MAX_CONTACTS].setNick(_nickname);
+	contact[_limit_numb % MAX_CONTACTS].setNumber(_phonenumber);
+	contact[_limit_numb % MAX_CONTACTS].setDarkSecret(_darksecret);
+	contact[_limit_numb % MAX_CONTACTS].setCheck();
+	_limit_numb++;
 }
 
 std::string	createString(std::string str)
@@ -95,11 +91,7 @@ void	PhoneBook::createPhoneBook()
 	std::cout << "|" << " idx" << "|" << std::setw(10) << "FirstName"
 			<< "|" << std::setw(10) << "LastName" << "|" << std::setw(10)
 			<< "NickName" << "|"<< std::endl;
-<<<<<<< HEAD
-	for (int i = 0; contact[i].getCheck() == true && i < 8; i++)
-=======
 	for (int i = 0; contact[i].getCheck() == true && i < MAX_CONTACTS; i++)
->>>>>>> refs/remotes/origin/main
 	{
 		std::cout << "|   " << i + 1;
 		std::cout << "|" << std::setw(10) << createString(contact[i].getFirst());
@@ -129,7 +121,7 @@ void	PhoneBook::search()
 	std::string	num;
 	int			i;
 
-	if (num_cont == 0)
+	if (_limit_numb == 0)
 	{
 		std::cout << "There are no contacts in the phonebook yet." << std::endl;
 		return ;

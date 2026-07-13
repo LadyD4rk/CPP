@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 18:29:51 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 17:05:49 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/13 13:01:19 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ class PhoneBook
 		void		printInformation(int i);
 	private:
 		Contact		contact[MAX_CONTACTS];
-		int			num_cont;
+		int			_limit_numb;
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/15 17:47:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/13 13:05:04 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/27 11:20:45 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,9 @@ std::string PhoneBook::getInput(std::string str)
 		if (std::cin.eof())
 			exit(0);
 	}
+	for (int i = 0; input[i]; i++)
+		if (input[i] == '\t')
+			input[i] = ' ';
 	return input;
 }
 

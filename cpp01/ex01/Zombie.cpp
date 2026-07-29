@@ -6,13 +6,15 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:26:14 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 17:12:39 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/27 14:22:51 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-Zombie::Zombie(){
+Zombie::Zombie()
+{
+	std::cout << "Zombie: Hello World!!!" << std::endl;
 }
 
 Zombie::~Zombie(void)

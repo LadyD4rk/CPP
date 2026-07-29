@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 16:56:13 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:22:56 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/29 14:04:25 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ int	main()
 		std::getline(std::cin, word);
 		if (std::cin.eof())
 			return (0);
-		if (word == "exit")
-			break;
 		while (i < 4)
 		{
 			if (word == options[i])
@@ -41,6 +39,7 @@ int	main()
 		}
 		if (i == 4)
 			std::cout << "Invalid level." << std::endl;
+		break;
 	}
 	return (0);
 }

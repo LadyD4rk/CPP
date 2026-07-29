@@ -3,27 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/12 13:46:17 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/02 03:08:00 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/07/29 14:10:23 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
-int	main()
+int	main(int ac, char **av)
 {
 	Harl		harl;
 	std::string	word;
-	std::string	options[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-	int			i;
-	
-	std::cout << "What level would Harl like to complain at?" << std::endl;
-	std::cout << "Options:\n	->DEBUG\n	->INFO\n	->WARNING\n	->ERROR" << std::endl;
-	while(1)
+
+	if (ac != 2)
 	{
-		i = 0;
+		std::cout << "ERROR: Invalid Parameters." << std::endl;
+		return (1);
+	}
+	harl.filter(av[1]);
+/* 	while(1)
+	{
 		std::cout << "->";
 		std::getline(std::cin, word);
 		if (std::cin.eof())
@@ -31,7 +32,6 @@ int	main()
 		if (word == "exit")
 			break;
 		harl.filter(word);
-	}
+	} */
 	return (0);
-	
 }

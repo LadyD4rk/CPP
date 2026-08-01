@@ -1,37 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
+/*   FrapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/02 15:18:53 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 14:41:18 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/16 13:58:52 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/08/01 18:58:51 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef FRAPTRAP_HPP
+# define FRAPTRAP_HPP
 
 # include <iostream>
 # include <string>
+# include "ClapTrap.hpp"
 
-class ClapTrap
+# define GREEN "\033[1;32m"
+# define WHITE "\033[0m"
+
+class FrapTrap : public ClapTrap
 {
 	public:
-		ClapTrap(std::string name);
-		ClapTrap(const ClapTrap &other);
-		ClapTrap &operator=(const ClapTrap &other);
-		~ClapTrap();
+		FrapTrap();
+		FrapTrap(std::string name);
+		FrapTrap(const FrapTrap &other);
+		FrapTrap &operator=(const FrapTrap &other);
+		~FrapTrap();
 		void	attack(const std::string& target);
-		void	takeDamage(unsigned int amount);
-		void	beRepaired(unsigned int amount);
-		int		getAttackDamage();
-	protected:
-		std::string	_name;
-		int			_hitPoints;
-		int			_energyPoints;
-		int			_attackDamage;	
+		void	highFivesGuys();
+		int		getAttack();
+		int		getEnergy();
+		std::string	getName();
+	private:
+
 };
 
 #endif

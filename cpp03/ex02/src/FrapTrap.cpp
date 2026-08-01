@@ -6,11 +6,22 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/16 14:21:20 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 15:44:51 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 19:04:59 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FrapTrap.hpp"
+
+FrapTrap::FrapTrap() : ClapTrap()
+{
+	this->_name = "Unamed";
+	_hitPoints = 100;
+	_energyPoints = 100;
+	_attackDamage = 30;
+	std::cout << "FrapTrap " << _name << " was initialized with..." << std::endl;
+	std::cout << "	" << "(" << _hitPoints << ") - Hit points." << std::endl;
+	std::cout << "	" << "(" << _energyPoints << ") - Energy points." << std::endl;
+}
 
 FrapTrap::FrapTrap(std::string name) : ClapTrap(name)
 {

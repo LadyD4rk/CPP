@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:18:53 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 14:12:46 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 18:53:56 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,13 @@
 # include <iostream>
 # include <string>
 
-# define BLUE "\033[1;34m"
+# define RED "\033[1;31m"
 # define WHITE "\033[0m"
 
 class ClapTrap
 {
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap &other);
 		ClapTrap &operator=(const ClapTrap &other);
@@ -30,7 +31,7 @@ class ClapTrap
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
 		int		getAttackDamage();
-	private:
+	protected:
 		std::string	_name;
 		int			_hitPoints;
 		int			_energyPoints;

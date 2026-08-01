@@ -8,7 +8,7 @@ RESET = \033[0m
 
 #flags
 CXX = c++
-CXXFLAGS = -Wall -Wextra -Werror -Wno-implicit-fallthrough -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 EXEC = harlFilter
 OBJ_DIR = Obj
 

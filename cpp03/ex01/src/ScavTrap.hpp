@@ -1,32 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 11:22:06 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/29 18:25:32 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/12 12:46:23 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/08/01 19:04:45 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_HPP
-# define WEAPON_HPP
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
 # include <iostream>
-# include <cstring>
 # include <string>
-# include <cstdlib>
+# include "ClapTrap.hpp"
 
-class Weapon{
+class ScavTrap : public ClapTrap
+{
 	public:
-		Weapon(std::string type);
-		~Weapon();
-		void		setType(std::string new_type);
-		const std::string	&getType();
-
+		ScavTrap();
+		ScavTrap(std::string name);
+		ScavTrap(const ScavTrap &other);
+		ScavTrap &operator=(const ScavTrap &other);
+		~ScavTrap();
+		void	attack(const std::string& target);
+		void	guardGate();
+		int		getAttack();
+		int		getEnergy();
+		std::string	getName();
 	private:
-		std::string		_type;
+		
 };
 
 #endif

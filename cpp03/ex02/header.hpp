@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   header.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/29 11:41:59 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/29 18:25:21 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/17 15:21:31 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/08/01 19:00:57 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef HEADER_HPP
+# define HEADER_HPP
 
-Weapon::Weapon(std::string type)
-{
-	this->_type = type;
-	std::cout << "Weapon created: " << _type << std::endl;
-}
+# include "src/ClapTrap.hpp"
+# include "src/ScavTrap.hpp"
+# include "src/FrapTrap.hpp"
 
-Weapon::~Weapon()
-{
-	std::cout << "Weapon destroyed: " << _type << std::endl;
-}
+# define BLUE "\033[1;34m"
+# define WHITE "\033[0m"
 
-void	Weapon::setType(std::string new_type)
-{
-	_type = new_type;
-}
-
-const std::string	&Weapon::getType()
-{
-	return _type;
-}
+#endif

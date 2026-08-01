@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FrapTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/16 13:58:52 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 15:44:55 by jobraga-         ###   ########.fr       */
+/*   Created: 2026/06/02 15:18:53 by jobraga-          #+#    #+#             */
+/*   Updated: 2026/08/01 19:01:14 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FRAPTRAP_HPP
-# define FRAPTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 # include <iostream>
 # include <string>
-# include "ClapTrap.hpp"
 
-# define GREEN "\033[1;32m"
-# define WHITE "\033[0m"
-
-class FrapTrap : public ClapTrap
+class ClapTrap
 {
 	public:
-		FrapTrap(std::string name);
-		FrapTrap(const FrapTrap &other);
-		FrapTrap &operator=(const FrapTrap &other);
-		~FrapTrap();
+		ClapTrap();
+		ClapTrap(std::string name);
+		ClapTrap(const ClapTrap &other);
+		ClapTrap &operator=(const ClapTrap &other);
+		~ClapTrap();
 		void	attack(const std::string& target);
-		void	highFivesGuys();
-		int		getAttack();
-		int		getEnergy();
-		std::string	getName();
-	private:
-
+		void	takeDamage(unsigned int amount);
+		void	beRepaired(unsigned int amount);
+		int		getAttackDamage();
+	protected:
+		std::string	_name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;	
 };
 
 #endif

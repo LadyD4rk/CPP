@@ -6,11 +6,22 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 13:09:39 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 15:29:33 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 19:04:36 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
+
+ScavTrap::ScavTrap() : ClapTrap()
+{
+	this->_name = "Unamed";
+	_hitPoints = 100;
+	_energyPoints = 50;
+	_attackDamage = 20;
+	std::cout << "ScavTrap " << _name << " was initialized with..." << std::endl;
+	std::cout << "	" << "(" << _hitPoints << ") - Hit points." << std::endl;
+	std::cout << "	" << "(" << _energyPoints << ") - Energy points." << std::endl;
+}
 
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {

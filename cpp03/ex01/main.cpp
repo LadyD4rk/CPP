@@ -6,12 +6,11 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:18:30 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/16 14:14:02 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 18:57:04 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#include "header.hpp"
 
 int main( void )
 {

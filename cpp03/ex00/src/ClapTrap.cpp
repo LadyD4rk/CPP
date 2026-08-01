@@ -6,13 +6,24 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:18:33 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/09 17:28:51 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 18:50:46 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
 /* Name was initialized with... (Points) - Hit points. (Points) - Energy points. */
+
+ClapTrap::ClapTrap()
+{
+	this->_name = "Unamed";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;	
+	std::cout<< _name << " was initialized with..." << std::endl;
+	std::cout << "	" << "(" << _hitPoints << ") - Hit points." << std::endl;
+	std::cout << "	" << "(" << _energyPoints << ") - Energy points." << std::endl;
+}
 
 ClapTrap::ClapTrap(std::string name)
 {

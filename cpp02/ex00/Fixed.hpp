@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 11:47:07 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/05/14 12:06:17 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/01 18:42:13 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ class Fixed
 		int		getRawBits(void) const;
 	private:
 		int	_value;
-		const static int _num_bits = 0;
+		const static int _num_bits = 8;
 };
 
 #endif

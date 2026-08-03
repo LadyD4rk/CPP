@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:18:33 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/01 18:51:24 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:52:36 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &other)
 
 	if (this == &other)
 		return (*this);
-	new_name = other._name + "jr";
+	new_name = other._name;
  	_name = new_name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;

@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 13:09:39 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/01 19:04:36 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:52:41 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ ScavTrap	&ScavTrap::operator=(const ScavTrap &other)
 
 	if (this == &other)
 		return (*this);
-	new_name = other._name + "jr";
+	new_name = other._name;
  	_name = new_name;
 	_hitPoints = other._hitPoints;
 	_energyPoints = other._energyPoints;

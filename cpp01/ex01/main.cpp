@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:26:03 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/23 18:19:49 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:51:31 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ int	main(int ac, char **av)
 	(void)ac;
 	if (ac != 3 || !checkNumb(av[1]))
 	{
-		std::cerr << "Error: Invalid Parameters." << std::endl;
+		std::cout << "Error: Invalid Parameters." << std::endl;
 		return (1);
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 17:10:17 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/01 18:48:10 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:56:18 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Cat::Cat(const Cat &other) : Animal(other)
 Cat	&Cat::operator=(const Cat &other)
 {
 	if (this != &other)
-		type = other.type + "_son";
+		type = other.type;
 	return *this;
 }
 

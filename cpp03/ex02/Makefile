@@ -9,10 +9,10 @@ RESET = \033[0m
 #flags
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-EXEC = FrapTrap
+EXEC = FragTrap
 OBJ_DIR = Obj
 
-SRC = main.cpp src/ClapTrap.cpp src/FrapTrap.cpp src/ScavTrap.cpp
+SRC = main.cpp src/ClapTrap.cpp src/FragTrap.cpp src/ScavTrap.cpp
 OBJ = $(addprefix $(OBJ_DIR)/, $(SRC:.cpp=.o))
 
 all: $(EXEC)

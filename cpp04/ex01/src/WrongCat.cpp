@@ -26,7 +26,7 @@ WrongCat::WrongCat(const WrongCat &other) : WrongAnimal(other)
 WrongCat	&WrongCat::operator=(const WrongCat &other)
 {
 	if (this != &other)
-		type = other.type + "_son";
+		type = other.type;
 	return *this;
 }
 

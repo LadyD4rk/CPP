@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/17 16:28:39 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/19 12:41:05 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:56:18 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Dog::Dog(const Dog &other) : Animal(other)
 Dog	&Dog::operator=(const Dog &other)
 {
 	if (this != &other)
-		type = other.type + "_son";
+		type = other.type;
 	return *this;
 }
 

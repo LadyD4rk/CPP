@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 15:18:30 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/01 19:00:05 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:54:17 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ int main( void )
 {
 	std::cout << GREEN << "--- BASIC TEST ---" << WHITE << std::endl;
 	{
-		FrapTrap	antonio("Antonio");
+		FragTrap	antonio("Antonio");
 	}
 	std::cout << GREEN << "\n--- ATTACK TEST ---" << WHITE << std::endl;
-	FrapTrap	cristina("Cristina");
-	FrapTrap	claudio("Claudio");
+	FragTrap	cristina("Cristina");
+	FragTrap	claudio("Claudio");
 	cristina.attack("Claudio");
 	claudio.takeDamage((unsigned int)cristina.getAttack());
 
 	std::cout << GREEN << "\n--- ENERGY TEST ---" << WHITE << std::endl;
-	FrapTrap	daniel("Daniel");
+	FragTrap	daniel("Daniel");
 	for (int i = 0; i < 100; i++)
 		daniel.beRepaired(2);
 
@@ -35,8 +35,8 @@ int main( void )
 
 	std::cout << GREEN << "\n--- COPY TEST ---" << WHITE << std::endl;
 	{
-		FrapTrap	julia("Julia");
-		FrapTrap	juliajr(julia);
+		FragTrap	julia("Julia");
+		FragTrap	juliajr(julia);
 		julia.attack("someone");
 		juliajr.attack("someone");
 	}

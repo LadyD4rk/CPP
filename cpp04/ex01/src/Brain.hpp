@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/22 16:18:16 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/22 17:51:03 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:59:53 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Brain
 		Brain();
 		Brain(const Brain &other);
 		Brain &operator=(const Brain &other);
-		virtual ~Brain();
+		~Brain();
 		void	setIdea(int index, std::string idea);
 		std::string	getIdea(int index);
 		void	printBrain();

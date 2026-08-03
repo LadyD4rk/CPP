@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:38:07 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/27 15:26:41 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:50:34 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ int	main(int ac, char **av)
 	while (1)
 	{
 		std::getline(std::cin, word);
+		if (std::cin.eof())
+			return (0);
 		for(int i = 0; word[i]; i++)
 			word[i] = (char)tolower(word[i]);
 		if (!strcmp(word.c_str(), "no"))
@@ -40,6 +42,7 @@ int	main(int ac, char **av)
 		else if (!strcmp(word.c_str(), "yes"))
 		{
 			std::cout << "Armindo ran away" << std::endl;
+			delete zombie;
 			break;
 		}
 		else

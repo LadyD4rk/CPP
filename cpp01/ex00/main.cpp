@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 10:38:07 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/03 20:50:34 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/04 11:43:32 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,13 +36,12 @@ int	main(int ac, char **av)
 			word[i] = (char)tolower(word[i]);
 		if (!strcmp(word.c_str(), "no"))
 		{
-			delete zombie;
+			//delete zombie;
 			break;
 		}
 		else if (!strcmp(word.c_str(), "yes"))
 		{
 			std::cout << "Armindo ran away" << std::endl;
-			delete zombie;
 			break;
 		}
 		else
@@ -52,6 +51,7 @@ int	main(int ac, char **av)
 
 		}
 	}
+	delete zombie;
 	std::cout << "*End History!!!*" << std::endl;
 	return (0);
 }

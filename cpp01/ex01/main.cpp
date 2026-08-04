@@ -3,36 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 14:26:03 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/08/03 20:51:31 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/04 11:53:11 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
-/* 
-General 42 decidiu fazer uma guerra...
-E chamou N zombie soldados.
-Todos gritaram...
-Jorge: BraiiiiiiinnnzzzZ...
-Jorge tomou o tiro e morreu.
-
-General 42 decided to start a war...
-And called in N zombie soldiers.
-They all shouted...
-Jorge: BraiiiiiiinnnzzzZ...
-Jorge got shot and died.
-
-General 42 decided to start a war...
-And called in N zombie soldiers, all named name.
-They all shouted...
-Jorge: BraiiiiiiinnnzzzZ...
-
-Jorge got shot and died.
-
-*/
 
 int		checkNumb(char *number)
 {
@@ -67,3 +45,15 @@ int	main(int ac, char **av)
 	std::cout << "*End History!!!*" << std::endl;
 	return (0);
 }
+
+/*General 42 decidiu fazer uma guerra...
+E chamou N zombie soldados.
+Todos gritaram...
+Jorge: BraiiiiiiinnnzzzZ...
+Jorge tomou o tiro e morreu.
+
+General 42 decided to start a war...
+And called in N zombie soldiers.
+They all shouted...
+Jorge: BraiiiiiiinnnzzzZ...
+Jorge got shot and died.*/

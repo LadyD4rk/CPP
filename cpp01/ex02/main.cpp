@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 12:02:53 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/07/02 02:34:31 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/04 11:53:29 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 int main()
 {
-/* 	int i = 2;
-	int &ref1= i;
-	int &ref2 = 0; */
-	
     std::string string  = "HI THIS IS BRAIN";
     std::string *stringPTR = &string;
     std::string &stringREF = string;

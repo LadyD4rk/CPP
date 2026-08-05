@@ -6,7 +6,7 @@
 /*   By: jobraga- <jobraga-@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/14 11:54:51 by jobraga-          #+#    #+#             */
-/*   Updated: 2026/06/02 15:24:18 by jobraga-         ###   ########.fr       */
+/*   Updated: 2026/08/05 15:07:41 by jobraga-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ Fixed	Fixed::operator-(const Fixed &other)
 Fixed	Fixed::operator*(const Fixed &other)
 {
 	Fixed	result;
-	int		num;
+	long	num;
 
 	num = this->_value * other._value;
 	result.setRawBits(num >> _num_bits);
@@ -108,7 +108,7 @@ Fixed	Fixed::operator*(const Fixed &other)
 Fixed	Fixed::operator/(const Fixed &other)
 {
 	Fixed	result;
-	int		num;
+	long	num;
 
 	num = this->_value / other._value;
 	result.setRawBits(num << _num_bits);

@@ -25,4 +25,16 @@ com &.
 	Acessam o valor diretamente.
 	Sempre válidas.
 
+	! Fixed Point
+Existem duas formas de representar números com casas decimais, temos:
+Floating Point (Float/Double) que o "ponto decimal" pode se mover,
+tem expoente. Complexo e depende se o computador tem o hardware dedicado
+que é o FDU tambem podendo ser chamado de Unidade de Ponto Flutuante
+para poder fazer as contas.
+Fixed Point que o "ponto decimal" fica numa posição fixa e combinada
+previamente, dentro de um número inteiro normal.
+
+Basicamente é como se pegassemos um int comum e dividissemos em duas
+partes.
+m
 */
